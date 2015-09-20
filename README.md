@@ -38,12 +38,19 @@
 
 ## First steps
   0) npm -g apigee-127
+  
   1) a127 project create <PROJECT_NAME>
+  
   2) cd <PROJECT_NAME>/
+  
   3) sudo npm i
+  
   4) a127 project start
+  
   5) a127 project edit
+  
   6) a127 account create <APIGEE_ACCOUNT_NAME>
+  
   7) DEBUG=true a127 project deploy -u (use -u flag to solve an intermitent issue while uploading to apigee servers)
 
 
