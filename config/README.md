@@ -15,7 +15,4 @@ x-a127-config:
   someLabel: &referenceKey "Your default value"
 
 
-Where referenceKey is used 
-
-APIGEE TUTORIAL
-https://www.youtube.com/watch?v=KL1kAH2ipBw
+Where referenceKey is used
