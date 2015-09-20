@@ -10,6 +10,8 @@
   "dependencies": {
     "a127-magic": "^0.11.0",
     "express": "^4.13.3",
+    "feedparser": "^1.1.3",
+    "lodash": "^3.10.1",
     "volos-analytics-apigee": "^0.4.1",
     "volos-analytics-common": "^0.2.3",
     "volos-analytics-memory": "^0.2.0",
