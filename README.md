@@ -110,7 +110,7 @@
 
     https://github.com/28msec/cellstore/tree/master/tasks
     
-    APIGEE TUTORIAL
+    APIGEE TUTORIAL:
     https://www.youtube.com/watch?v=KL1kAH2ipBw
     https://github.com/apigee-127/a127-documentation/wiki
     https://github.com/apigee-127/a127-documentation/wiki/Quick-Start:-Add-Quota
