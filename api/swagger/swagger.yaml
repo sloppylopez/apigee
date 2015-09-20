@@ -1,7 +1,7 @@
 swagger: "2.0"
 info:
   version: "0.0.1"
-  title: Hello World App
+  title: Slapi
 # during dev, should point to your local machine
 host: localhost:10010
 # basePath prefixes all resource paths 
@@ -18,12 +18,24 @@ consumes:
 produces:
   - application/json
 x-a127-config: {}
-x-a127-services: {}
+x-a127-services:
+  quota:     
+    provider: volos-quota-memory
+    options:
+      timeUnit: minute
+      interval: 1
+      allow: 60
+  cache:
+    provider: volos-cache-memory
+    options:
+      name: hello-cache
+      ttl: 60000
 paths:
   /hello:
     # binds a127 app logic to a route
     x-swagger-router-controller: hello_world
-    x-a127-apply: {}
+    x-a127-apply:
+      quota: {}
     get:
       description: Returns 'Hello' to the caller
       # used as the method name of the controller
