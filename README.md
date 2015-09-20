@@ -53,7 +53,11 @@
   
   7) DEBUG=true a127 project deploy -u (use -u flag to solve an intermitent issue while uploading to apigee servers)
   
-  8) apigeetool deploynodeapp -o YOUR_ORG -e test -u USERNAME -n APP_NAME -m app.js -d . -U -V
+  8) apigeetool deploynodeapp -o <YOUR_ORG_NAME> -e test -u <YOUR_APIGEE_USERNAME> -n <YOUR_APIGEE_PROXY_NAME> -p <YOUR_APIGEE_PASSWORD> -m app.js -d . -U -V
+  
+     apigeetool deploynodeapp -n {A name for your new proxy} -d {The root directory of your Node.js app} 
+     -m {The name of the main Node.js file} -o {Your org name on Edge} -e {The environment to deploy to} 
+     -b {The base URL for your proxy} -u {Your Edge email address} -p {Your Edge password}
 
 
 ## Apigee-127
@@ -118,6 +122,7 @@
     https://github.com/apigee-127/a127-documentation/wiki/Quick-Start:-Add-Quota
     https://github.com/apigee-127/a127-documentation/wiki/Quick-Start:-Add-a-New-Path
     https://github.com/apigee-127/a127-documentation/wiki/Quick-Start:-Add-Caching
+    http://apigee.com/docs/api-services/content/deploying-standalone-nodejs-app
     http://apigee.com/docs/app-services/content/installing-apigee-sdk-javascript
 
 

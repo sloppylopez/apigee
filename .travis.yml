@@ -7,18 +7,19 @@ branches:
   - /-job-\d+/
   only:
   - master
-before_install:
+before_install: 
 install:
 - npm i -g codeclimate-test-reporter gulp apigeetool
 - npm i
-before_script:
+before_script: 
 script: npm test
 after_script:
 - echo "TRAVIS_PULL_REQUEST ${TRAVIS_PULL_REQUEST}"
 - echo "TRAVIS_BRANCH ${TRAVIS_BRANCH}"
 - codeclimate-test-reporter < ./coverage/lcov.info
 after_success:
-
+- if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then apigeetool deploynodeapp -o sloppylopez -e test -u sloppy@sloppylopez.com -n apigeeremoteproxy -p ${YOUR_APIGEE_PASSWORD} -m app.js -d . -U -V; fi
 env:
   global:
-    secure: iWAiJniBj99t+m7GM/rGRYrEXdEwZjHk2bSKM3QhryTC/XMuhrhAU6Hfodytgj0Y0sNwbRe9rMT9seFG4KrqvsWLXjhGR8RqJfMXhoKeeV2Ged4k5SgGkKSCLUyLsqNx8Iic2WLiviBgJVlSqBax/u2UCLkZdha6lzogvEDhhFUURvT4zgwFS5fjxnsCYWTBvBZZ/pKGkN2fjwJFW2/5LNCnhG/cjxVUNL0SPZPDS1pnFG9nq2W8rfc1wFZ0cUmR2ePgWKQX2brPkd98pCadL3cxEyw5yyqUhgCo6P5zTHdFqb21mIzxirG9ipjaCcQcxIGoU2zHKy/wd6QQFOytiXBOVS/n28pwEsrBaErchIHjmYLt8gscgcwmfxTU6NV/fLw0O8EQbzFJ/c5s60BQHLMk4Gn0vMyXTxCgorT3cpfMQtp9WELA4ycE0Xr5+E0bB9MOI84JXBDgufxEtCgMkCsQJ/VE/Q4IUkPiSVIlr3+fts1cdPNSh8dMNEiZgFurMewgEdSIa85zKhkXx2JDBLWhuaL4VOeugzqs04cFIXFWXbzaVowBS3t+nYlyzPvGCGJ/v2tVQuQCIZLLWqDlzcXVAmVnpIoDm7emlUKYdwcAHyDoaLx0waJU673iz6ajk/keflPZLLa/ROyWwoq5xnMRXqmvLx6mXoIGk+WKlZE=
+    - secure: Ro3jb5zh1TFHPxLGezO0CQsZrto6PjqcIml6Cfx8cOsrAk5LTtPaqe2VMy8jJ9AvQCAa/0DOwnL+OgJXy9eBna/AL8CZ5CX/bCwHwjDWzi87xkpmapxadkXu/KPEMWjSIq++WMbpJ0MF4IS20eMCjRWI0huZmixuXQDBZi5cEVezAT4d1iAth5A+lzL1aCa5WdZxzXvs2KuFtLpzK/E1QciyREcRpyeMRKGApctK7ZGqYaWkyUHuDslJLsTBcqqo5aLLtTCM5PzhbITPk1x8mt7Owz5THYv6uLdj0v7CVJCkGeqi1HlApFj3dPCryDd4uOACyQRGYx+i0Fa6+420g8UVKFHjFZj1kFUGNRqc2cX3wrDak8fbIGi0jZYqfBY4NqWpZo1rtkSCQ9lQZXim07RA3CN4GHCO7XP9Xv59LLT+Yc0fCx3WstsVnTuCm9wSmYOMbnPO9N/moP1Os/fRdZSR5unTLBhJ9Xyn9RTokHRrL7J0YD0bOjalb7m9aPTGDEZVFWm6ewR09BRrTXBxtF65v6rKr7bdYMpn937SQtncU1co7AA2kLP5p87eX2IfZoe1D/Wm8RqF6iuJC8yVMpBQeEyY04ekkBbzo8m4QOW0N0q3s1I3/OtN/8bGiUK0kqd3eXe3rlc9cSvbmSbfA6djtz+VC+dAhnq0UOEz1Eo=
+    - secure: LBGhGMPEi4KZCdL+ztkgKrwnlQ/zwwvDJezLiEStp97SaoYqXWUWBsdfGJpk7bQKVBO7UkBayJU+C3YeOEl4lrRpZsgnRTpi6jJVvqySDyQEoFDkoRT7r13gnPtqjvhEsHDoN282Aeix4piMmswmsjdssogiWmf1+w4HtZJGNiDGMtd9+qNE60u+DI9tcbKVMHtGVZc2rJKK/qN9ALNgPKC6742ZVnMBPQxDnS50kmxl/rqvSE67S4oY2gwKXZcImNIL9aVG5t2ulgkvcF+okeV775Zdew2bNIo5MNqRrCR5K/i7SoaR2xXjeDHWK5f+BtRH2ws0tGZVw9vTFFCJy6dQTKiYv3Ti5xBHlbnhyl9gcvBHGXpUeZjG5ptW9slNI3iYiHzAg/Kk/xwAs1qiot+AlSPI6+gWg2um/f1r4CB89vQJrHpMK17lu4KiGNZJLP7Q8z8M2za05GBJeAb/zFvfn4PBbXWEiqBR/L9obHmllFrzTNkZocCXF4r0+EUfJaqM1PGsAncSdjlpKdaX8JTHxGNwUZkEWhPO9tH69BBP0TjJeYpkb5KvITEvpWQ1cLzjCehlhWK2vrfiAdqLN7drasQp8cgwFD3LcSN1meO9gzADlvtdK36FayU9buuNDGlSPw6NPlkbdfdqmbt2bUm4lIp1RWf8Qyms1/uJp0E=
