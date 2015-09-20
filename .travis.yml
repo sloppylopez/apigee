@@ -9,7 +9,7 @@ branches:
   - master
 before_install:
 install:
-- npm i -g codeclimate-test-reporter jshint mocha gulp gulp-mocha venus
+- npm i -g codeclimate-test-reporter gulp
 - npm i
 before_script:
 script: npm test
