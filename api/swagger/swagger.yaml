@@ -36,6 +36,10 @@ paths:
     x-swagger-router-controller: hello_world
     x-a127-apply:
       quota: {}
+      cache:
+          key:
+            helper: cache
+            function: setKey
     get:
       description: Returns 'Hello' to the caller
       # used as the method name of the controller
@@ -57,6 +61,37 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+
+  /hello2:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: hello2_world
+    x-a127-apply:
+      quota: {}
+      cache:
+          key:
+            helper: cache
+            function: setKey
+    get:
+      description: Returns 'hello2' to the caller
+      # used as the method name of the controller
+      operationId: hello2
+      parameters:
+        - name: name
+          in: query
+          description: The name of the person to whom to say hello2
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/Hello2WorldResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
 # complex objects have schema definitions
 definitions:
   HelloWorldResponse:
@@ -65,7 +100,19 @@ definitions:
     properties:
       message:
         type: string
+  Hello2WorldResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
   ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  SpecResponse:
     required:
       - message
     properties:

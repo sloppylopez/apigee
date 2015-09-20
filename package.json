@@ -42,7 +42,8 @@
     "usergrid": "^0.10.9"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "edit": "a127 project edit"
   },
   "api": {
     "name": "apigee",

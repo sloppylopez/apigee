@@ -44,17 +44,18 @@
   4) a127 project start
   5) a127 project edit
   6) a127 account create <APIGEE_ACCOUNT_NAME>
+  7) DEBUG=true a127 project deploy -u (use -u flag to solve an intermitent issue while uploading to apigee servers)
 
 
 ## Apigee-127
-    Node server with Express 4, an example API for bulking data in a remote Elastic Search
-    connected with Swagger for nice and easy API definition schema-based, the great feature
-    is that Swagger is installed as a dependency and Gulp install it in our local for
-    a plug-and-play usage, but also it generates the JS code based on the schema definition
-    of the API, so if you want to modify the output or input of 1 or your API calls, you
-    just change it manually in the Swagger UI, and Gulp will generate the JS code of the API
-    so you don;t have to touch code to change your API definitions, you will only have to change
-    the business logic impacted with the change in your API.
+    Node server with Express 4 and Swagger specification based, an example API for bulking 
+    data in a remote Elastic Search connected with Swagger for nice and easy API definition 
+    schema-based, the great feature is that Swagger is installed as a dependency and Gulp 
+    install it in our local for a plug-and-play usage, but also it generates the JS code based 
+    on the schema definition of the API, so if you want to modify the output or input of 1 or 
+    your API calls, you just change it manually in the Swagger UI, and Gulp will generate the 
+    JS code of the API so you don;t have to touch code to change your API definitions, you will
+    only have to change the business logic impacted with the change in your API.
 
 ## Features so far:
     1) Don't Swim in the mud! :Gulp building the JS for our API using the schema defined in the Swagger UI
@@ -108,6 +109,7 @@
     https://github.com/apigee-127/a127-documentation/wiki/Quick-Start:-Add-Quota
     https://github.com/apigee-127/a127-documentation/wiki/Quick-Start:-Add-a-New-Path
     https://github.com/apigee-127/a127-documentation/wiki/Quick-Start:-Add-Caching
+    http://apigee.com/docs/app-services/content/installing-apigee-sdk-javascript
 
 
 
