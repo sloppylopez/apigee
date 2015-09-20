@@ -3,7 +3,7 @@
 var gulp = require('gulp-param')(require('gulp'), process.argv),
     plugins = require('gulp-load-plugins')(),
     spawn = require('child_process').spawn,
-    swaggerCodeGenerator = require('./api/swagger/scripts/swagger-code-generator.js'),
+    swaggerCodeGenerator = require('./api/swagger/scripts/swagger-code-generator'),
     spawned;
 
 /**
@@ -88,11 +88,11 @@ gulp.task('swagger-code-gen', function (framework, destinationFile, fileFormat, 
  * description: run tests using mocha and istambul lcov reporter
  */
 gulp.task('test', function () {
-    gulp.src(['api/{,*/}*.js', 'app.js', '!api/swagger/*'])
+    gulp.src(['api/**/*.js', 'app.js', '!api/swagger/*'])
         .pipe(plugins.istanbul()) // Covering files
         .pipe(plugins.istanbul.hookRequire()) // Force `require` to return covered files
         .on('finish', function () {
-            gulp.src(['test/*.js'])
+            gulp.src(['test/**/*.js'])
                 .pipe(plugins.mocha({reporter: process.env.TRAVIS ? 'spec' : 'nyan'}))
                 .pipe(plugins.istanbul.writeReports()) // Creating the reports after tests ran
                 .pipe(plugins.istanbul.enforceThresholds({thresholds: {global: 1}})) // Enforce a coverage of at least 1%
