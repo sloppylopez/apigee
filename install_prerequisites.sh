@@ -14,7 +14,7 @@ travis encrypt CODECLIMATE_REPO_TOKEN=<YOUR_CODE_CLIMATE_TOKEN> --add
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 #Install npm global dependencies
-sudo npm i -g jshint gulp apigee-127
+sudo npm i -g jshint gulp apigee-127 apigeetool
 
 #Check versions of installed dependencies
 nodejs -v

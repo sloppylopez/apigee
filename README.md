@@ -52,6 +52,8 @@
   6) a127 account create <APIGEE_ACCOUNT_NAME>
   
   7) DEBUG=true a127 project deploy -u (use -u flag to solve an intermitent issue while uploading to apigee servers)
+  
+  8) apigeetool deploynodeapp -o YOUR_ORG -e test -u USERNAME -n APP_NAME -m app.js -d . -U -V
 
 
 ## Apigee-127

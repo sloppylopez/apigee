@@ -28,7 +28,6 @@
     "volos-spikearrest-memory": "^0.10.0"
   },
   "devDependencies": {
-    "apigeetool": "^0.5.4",
     "gulp": "^3.9.0",
     "gulp-istanbul": "^0.10.0",
     "gulp-jshint": "^1.11.2",
