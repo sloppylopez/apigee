@@ -9,10 +9,10 @@ module.exports = function (framework, destinationFile, fileFormat, destinationFo
             sourceCode, destinationPath = destinationFolder + destinationFile + fileFormat;
         switch (framework) {
             case 'nodejs':
-                sourceCode = CodeGen.getNodeCode({className: destinationFile || 'Test', swagger: swagger});
+                sourceCode = CodeGen.getNodeCode({className: destinationFile, swagger: swagger});
                 break;
             case 'angularjs':
-                sourceCode = CodeGen.getAngularCode({className: destinationFile || 'Test', swagger: swagger});
+                sourceCode = CodeGen.getAngularCode({className: destinationFile, swagger: swagger});
                 break;
             //TODO custom
             default:
