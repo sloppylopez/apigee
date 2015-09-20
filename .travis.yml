@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+- 0.12
+sudo: false
+branches:
+  except:
+  - /-job-\d+/
+  only:
+  - master
+before_install:
+install:
+- npm i -g codeclimate-test-reporter jshint mocha gulp gulp-mocha venus
+- npm i
+before_script:
+script: npm test
+after_script:
+- echo "TRAVIS_PULL_REQUEST ${TRAVIS_PULL_REQUEST}"
+- echo "TRAVIS_BRANCH ${TRAVIS_BRANCH}"
+- codeclimate-test-reporter < ./coverage/lcov.info
+after_success:
+
+env:
+  global:
+    secure: iWAiJniBj99t+m7GM/rGRYrEXdEwZjHk2bSKM3QhryTC/XMuhrhAU6Hfodytgj0Y0sNwbRe9rMT9seFG4KrqvsWLXjhGR8RqJfMXhoKeeV2Ged4k5SgGkKSCLUyLsqNx8Iic2WLiviBgJVlSqBax/u2UCLkZdha6lzogvEDhhFUURvT4zgwFS5fjxnsCYWTBvBZZ/pKGkN2fjwJFW2/5LNCnhG/cjxVUNL0SPZPDS1pnFG9nq2W8rfc1wFZ0cUmR2ePgWKQX2brPkd98pCadL3cxEyw5yyqUhgCo6P5zTHdFqb21mIzxirG9ipjaCcQcxIGoU2zHKy/wd6QQFOytiXBOVS/n28pwEsrBaErchIHjmYLt8gscgcwmfxTU6NV/fLw0O8EQbzFJ/c5s60BQHLMk4Gn0vMyXTxCgorT3cpfMQtp9WELA4ycE0Xr5+E0bB9MOI84JXBDgufxEtCgMkCsQJ/VE/Q4IUkPiSVIlr3+fts1cdPNSh8dMNEiZgFurMewgEdSIa85zKhkXx2JDBLWhuaL4VOeugzqs04cFIXFWXbzaVowBS3t+nYlyzPvGCGJ/v2tVQuQCIZLLWqDlzcXVAmVnpIoDm7emlUKYdwcAHyDoaLx0waJU673iz6ajk/keflPZLLa/ROyWwoq5xnMRXqmvLx6mXoIGk+WKlZE=
