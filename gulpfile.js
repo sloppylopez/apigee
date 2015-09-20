@@ -102,15 +102,15 @@ gulp.task('test', function () {
         });
 });
 
-///**
-// * $ gulp lint
-// * description: linting with plugins.jshint
-// */
-//gulp.task('lint', function () {
-//    return gulp.src(['api/{,*/}*.js', 'gulpfile.json', '!api/swagger/*'])
-//        .pipe(plugins.jshint())
-//        .pipe(plugins.jshint.reporter('default'));
-//});
+/**
+ * $ gulp lint
+ * description: linting with plugins.jshint
+ */
+gulp.task('lint', function () {
+    return gulp.src(['api/{,*/}*.js', 'gulpfile.js', '!api/swagger/*'])
+        .pipe(plugins.jshint())
+        .pipe(plugins.jshint.reporter('default'));
+});
 
 /**
  * $ gulp default
