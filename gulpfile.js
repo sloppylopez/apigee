@@ -118,7 +118,11 @@ gulp.task('lint', function () {
  */
 gulp.task('default', function () {
     plugins.util.log(process.env.TRAVIS + ' Travis environment');
-    process.env.TRAVIS ? gulp.start('swagger') : gulp.start(['schema', 'swagger-ui', 'serve']);
+    if (process.env.TRAVIS) {
+        gulp.start('swagger');
+    } else {
+        gulp.start(['schema', 'swagger-ui', 'serve']);
+    }
     gulp.watch(['api/{,*/}*.js'], ['schema', 'swagger-ui', 'serve']);
     plugins.util.log('Server up and running...');
 });

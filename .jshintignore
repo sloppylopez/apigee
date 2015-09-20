@@ -1,0 +1,9 @@
+node_modules
+bower_components
+.tmp
+dist
+coverage
+config
+.coverdata
+debug
+unit-test-coverage

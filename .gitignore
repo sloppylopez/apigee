@@ -7,6 +7,9 @@ logs
 
 # Runtime data
 pids
+/config/.a127_env
+/config/.a127_secrets
+/config/.a127_services
 *.pid
 *.seed
 
