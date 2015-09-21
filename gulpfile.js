@@ -93,7 +93,7 @@ gulp.task('test', function () {
         .pipe(plugins.istanbul.hookRequire()) // Force `require` to return covered files
         .on('finish', function () {
             gulp.src(['test/**/*.js'])
-                .pipe(plugins.mocha({reporter: process.env.TRAVIS ? 'spec' : 'spec'}))
+                .pipe(plugins.mocha({reporter: process.env.TRAVIS ? 'spec' : 'nyan'}))
                 .pipe(plugins.istanbul.writeReports()) // Creating the reports after tests ran
                 .pipe(plugins.istanbul.enforceThresholds({thresholds: {global: 1}})) // Enforce a coverage of at least 1%
                 .once('end', function () {
