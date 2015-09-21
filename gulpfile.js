@@ -32,7 +32,7 @@ gulp.task('serve', function () {
 gulp.task('swagger', function (framework, destinationFile, fileFormat, destinationFolder) {
     gulp.start('schema');
     gulp.start('swagger-ui');
-    plugins.util.log(swaggerCodeGenerator(framework || 'angularjs', destinationFile || 'slapi', fileFormat || '.js', destinationFolder || '../angulpar/src/app/swagger/'));
+    plugins.util.log(swaggerCodeGenerator(framework || 'angularjs', destinationFile || 'slapi', fileFormat || '.js', destinationFolder || './api/swagger/'));
 });
 
 /**
@@ -79,7 +79,7 @@ gulp.task('swagger-ui', ['init'], function () {
  * additional info: fileFormat and destinationFile must be different look swaggerCodeGenerator();
  */
 gulp.task('swagger-code-gen', function (framework, destinationFile, fileFormat, destinationFolder) {
-    swaggerCodeGenerator(framework || 'angularjs', destinationFile || 'slapi', fileFormat || '.js', destinationFolder || '../angulpar/src/app/swagger/');
+    swaggerCodeGenerator(framework || 'angularjs', destinationFile || 'slapi', fileFormat || '.js', destinationFolder || './api/swagger/');
 });
 
 
