@@ -36,7 +36,7 @@
     -h, --help     output usage information
     -V, --version  output the version number
 
-## First steps
+## Deploy to APIGEE FREE FOR TRIAL ONLY 90 DAYS... :_(
   0) npm -g apigee-127
   
   1) a127 project create <PROJECT_NAME>
@@ -59,6 +59,12 @@
      -m {The name of the main Node.js file} -o {Your org name on Edge} -e {The environment to deploy to} 
      -b {The base URL for your proxy} -u {Your Edge email address} -p {Your Edge password}
 
+## Deploy to EBS AMAZON
+    1)a127 account create <APIGEE_ACCOUNT_NAME>
+    2)choose Amazon
+    3)a127 account select <APIGEE_ACCOUNT_NAME>
+    4)a127 account show
+    5)a127 project deploy
 
 ## Apigee-127
     Node server with Express 4 and Swagger specification based, an example API for bulking 
@@ -124,6 +130,8 @@
     https://github.com/apigee-127/a127-documentation/wiki/Quick-Start:-Add-Caching
     http://apigee.com/docs/api-services/content/deploying-standalone-nodejs-app
     http://apigee.com/docs/app-services/content/installing-apigee-sdk-javascript
+    https://community.apigee.com/articles/8729/apigee-tools-plugins-apigee-development-made-easy.html
+    https://github.com/apigee-127/a127-documentation/wiki/deploy-ebs
 
 
 

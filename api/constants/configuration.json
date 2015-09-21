@@ -1,0 +1,4 @@
+{
+  "firebaseIO": "https://sloppy.firebaseio.com/",
+  "elasticsearchHost": "172.17.42.1:9200"
+}

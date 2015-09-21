@@ -1,7 +1,8 @@
 #!/bin/bash
 #Pre-requisites
 curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
-sudo apt-get install -y -qq nodejs npm
+sudo apt-get install -y -qq nodejs npm python-pip
+pip install awsebcli
 
 #Install travis-cli command line to be able to encrypt api_keys in the Travis build
 sudo gem install travis
@@ -15,7 +16,7 @@ travis encrypt YOUR_APIGEE_PASSWORD=<YOUR_APIGEE_PASSWORD> --add
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 #Install npm global dependencies
-sudo npm i -g jshint gulp apigee-127 apigeetool
+sudo npm i -g jshint gulp apigee-127
 
 #Check versions of installed dependencies
 nodejs -v

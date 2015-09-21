@@ -9,7 +9,7 @@ branches:
   - master
 before_install: 
 install:
-- npm i -g codeclimate-test-reporter gulp apigeetool
+- npm i -g codeclimate-test-reporter gulp apigee-127 python-pip
 - npm i
 before_script: 
 script: npm test
@@ -18,7 +18,8 @@ after_script:
 - echo "TRAVIS_BRANCH ${TRAVIS_BRANCH}"
 - codeclimate-test-reporter < ./coverage/lcov.info
 after_success:
-- if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then apigeetool deploynodeapp -o sloppylopez -e test -u sloppy@sloppylopez.com -n apigeeremoteproxy -p ${YOUR_APIGEE_PASSWORD} -m app.js -d . -U -V; fi
+- pip install awsebcli
+- if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo 'testing CI-CD DEPLOYMENY COMPLETE!'; fi
 env:
   global:
     - secure: Ro3jb5zh1TFHPxLGezO0CQsZrto6PjqcIml6Cfx8cOsrAk5LTtPaqe2VMy8jJ9AvQCAa/0DOwnL+OgJXy9eBna/AL8CZ5CX/bCwHwjDWzi87xkpmapxadkXu/KPEMWjSIq++WMbpJ0MF4IS20eMCjRWI0huZmixuXQDBZi5cEVezAT4d1iAth5A+lzL1aCa5WdZxzXvs2KuFtLpzK/E1QciyREcRpyeMRKGApctK7ZGqYaWkyUHuDslJLsTBcqqo5aLLtTCM5PzhbITPk1x8mt7Owz5THYv6uLdj0v7CVJCkGeqi1HlApFj3dPCryDd4uOACyQRGYx+i0Fa6+420g8UVKFHjFZj1kFUGNRqc2cX3wrDak8fbIGi0jZYqfBY4NqWpZo1rtkSCQ9lQZXim07RA3CN4GHCO7XP9Xv59LLT+Yc0fCx3WstsVnTuCm9wSmYOMbnPO9N/moP1Os/fRdZSR5unTLBhJ9Xyn9RTokHRrL7J0YD0bOjalb7m9aPTGDEZVFWm6ewR09BRrTXBxtF65v6rKr7bdYMpn937SQtncU1co7AA2kLP5p87eX2IfZoe1D/Wm8RqF6iuJC8yVMpBQeEyY04ekkBbzo8m4QOW0N0q3s1I3/OtN/8bGiUK0kqd3eXe3rlc9cSvbmSbfA6djtz+VC+dAhnq0UOEz1Eo=
