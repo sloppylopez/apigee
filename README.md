@@ -139,6 +139,7 @@ Built on Node.js
     http://apigee.com/docs/app-services/content/installing-apigee-sdk-javascript
     https://community.apigee.com/articles/8729/apigee-tools-plugins-apigee-development-made-easy.html
     https://github.com/apigee-127/a127-documentation/wiki/deploy-ebs
+    https://github.com/apigee-127/a127-documentation/wiki/Apigee-127-command-line-reference
 
 
 

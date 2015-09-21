@@ -59,9 +59,9 @@
     "validate": "npm ls"
   },
   "pre-commit": [
+    "swagger",
     "lint",
     "validate",
-    "swagger",
     "test"
   ],
   "api": {
