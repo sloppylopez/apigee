@@ -11,7 +11,7 @@ before_install:
 install:
 - npm i -g codeclimate-test-reporter gulp apigee-127
 - npm i
-before_script: npm schema
+before_script: npm run schema
 script: npm test
 after_script:
 - echo "TRAVIS_PULL_REQUEST ${TRAVIS_PULL_REQUEST}"
