@@ -55,11 +55,11 @@
     "edit": "a127 project edit",
     "test": "gulp test",
     "lint": "gulp lint",
-    "swagger": "gulp swagger",
+    "schema": "gulp schema",
     "validate": "npm ls"
   },
   "pre-commit": [
-    "swagger",
+    "schema",
     "lint",
     "validate",
     "test"
