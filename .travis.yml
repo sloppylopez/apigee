@@ -9,7 +9,7 @@ branches:
   - master
 before_install: 
 install:
-- npm i -g codeclimate-test-reporter gulp apigee-127 python-pip
+- npm i -g codeclimate-test-reporter gulp apigee-127
 - npm i
 before_script: 
 script: npm test
@@ -18,7 +18,7 @@ after_script:
 - echo "TRAVIS_BRANCH ${TRAVIS_BRANCH}"
 - codeclimate-test-reporter < ./coverage/lcov.info
 after_success:
--apt-get install python-pip
+- apt-get install python-pip
 - pip install awsebcli
 - if [[ "${TRAVIS_PULL_REQUEST}" == "false" ]]; then echo 'testing CI-CD DEPLOYMENY COMPLETE!'; fi
 env:
