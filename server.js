@@ -7,12 +7,12 @@
 var express = require('express'),        // call express
     server = exports.server = express(), // define our server using express
     bodyParser = require('body-parser'),
-    esLoadHandler = require('./scripts/esloadhandler.js'),
+    esLoadHandler = require('./api/helpers/esloadhandler.js'),
     elasticSearch = require('elasticsearch'),
-    targets = require('./constants/targets.json'),
+    targets = require('./api/constants/targets.json'),
+    config = require('./api/constants/configuration.json'),
     exphbs = require('express-handlebars'),
-    swagger = require('./swagger/specs/spec.json'),
-    config = require('./constants/config.json'),
+    swagger = require('./api/swagger/schemas/spec-schema.json'),
     Firebase = require('firebase');
 
 //Firebase Instance
