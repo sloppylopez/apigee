@@ -144,3 +144,7 @@ Built on Node.js
 
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sloppylopez/apigee/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
