@@ -12,25 +12,30 @@ Model First toolkit to build enterprise class APIs
 Open Source
 Built on Node.js
 
-2. First Steps :
+2. First Steps to Run the Swagger-UI and API:
 
     $ npm i
-    
-    $ gulp
     
     $ gulp swagger
     
     $ node server.js &
     
     $ node app.js &
+    
+3. First Steps to Edit the Swagger file of your API and regenerate the SDK to consume the Swagger-API automatically :
 
-3. URL'S Of Interest:
+    $ npm run edit
+    
+    you will get redirected to http://localhost:37460/#/
+
+4. URL'S Of Interest:
+
     Swagger-UI: http://localhost:3002/
     
     Swagger-API-Endpoint: http://127.0.0.1:10010/hello?name=Scott
     
 
-## APIGEE MANUAL
+## ADDITIONAL INFO:APIGEE MANUAL
   
   Usage: a127 [options] [command]
 
