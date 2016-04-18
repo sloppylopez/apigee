@@ -13,14 +13,20 @@ Open Source
 Built on Node.js
 
 2. First Steps :
+
     $ npm i
+    
     $ gulp
+    
     $ gulp swagger
+    
     $ node server.js &
+    
     $ node app.js &
 
 3. URL'S Of Interest:
     Swagger-UI: http://localhost:3002/
+    
     Swagger-API-Endpoint: http://127.0.0.1:10010/hello?name=Scott
     
 

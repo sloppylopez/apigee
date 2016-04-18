@@ -51,6 +51,7 @@
     "usergrid": "^0.10.9"
   },
   "scripts": {
+    "init": "gulp schema && gulp swagger-ui && gulp init && gulp swagger",
     "start": "node app.js",
     "edit": "a127 project edit",
     "test": "gulp test",
