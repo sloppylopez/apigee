@@ -10,6 +10,11 @@ Model First toolkit to build enterprise class APIs
 Open Source
 Built on Node.js
 
+1. First Steps :
+    $ npm i
+    $ gulp
+    $ gulp swagger
+
 ## APIGEE MANUAL
   
   Usage: a127 [options] [command]
