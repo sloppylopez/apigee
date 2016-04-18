@@ -61,10 +61,10 @@ server.use(function (req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
-server.set('views', __dirname + '/swagger/views');
+server.set('views', __dirname + '/api/swagger/swagger-ui');
 server.engine('hbs', exphbs({extname: '.hbs'}));
 server.set('view engine', 'hbs');
-server.use(express.static('swagger/views'));
+server.use(express.static('./api/swagger/swagger-ui/'));
 //server.use(require('connect-livereload')());
 
 var port = process.env.PORT || 3002;        // set our port

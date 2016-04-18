@@ -107,7 +107,7 @@ gulp.task('test', function () {
  * description: linting with plugins.jshint
  */
 gulp.task('lint', function () {
-    return gulp.src(['api/{,*/}*.js', 'gulpfile.js', '!api/swagger/*'])
+    return gulp.src(['api/{,*/}*.js', 'gulpfile.js', '!api/swagger/slapi.js'])
         .pipe(plugins.jshint())
         .pipe(plugins.jshint.reporter('default'));
 });
