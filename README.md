@@ -4,16 +4,25 @@
 [![built with gulp](https://raw.github.com/cyparu/artwork/master/builtwith.png)](http://gulpjs.com)
 [![oficial site](https://img.shields.io/badge/sloppy-lopez-pink.svg)](http://sloppylopez.com)
 
-1. Apigee-127 :
+# Automated Node based REST API based on Swagger boiler plate
+
+1. Node Server With Swagger-UI and Swagger API :
 
 Model First toolkit to build enterprise class APIs
 Open Source
 Built on Node.js
 
-1. First Steps :
+2. First Steps :
     $ npm i
     $ gulp
     $ gulp swagger
+    $ node server.js &
+    $ node app.js &
+
+3. URL'S Of Interest:
+    Swagger-UI: http://localhost:3002/
+    Swagger-API-Endpoint: http://127.0.0.1:10010/hello?name=Scott
+    
 
 ## APIGEE MANUAL
   
