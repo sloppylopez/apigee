@@ -22,18 +22,15 @@ Built on Node.js
     
     $ node app.js &
     
+    Swagger-UI: http://localhost:3002/
+    
+    Swagger-API-Endpoint: http://127.0.0.1:10010/hello?name=Scott
+    
 3. First Steps to Edit the Swagger file of your API and regenerate the SDK to consume the Swagger-API automatically :
 
     $ npm run edit
     
     you will get redirected to http://localhost:37460/#/
-
-4. URL'S Of Interest:
-
-    Swagger-UI: http://localhost:3002/
-    
-    Swagger-API-Endpoint: http://127.0.0.1:10010/hello?name=Scott
-    
 
 ## ADDITIONAL INFO:APIGEE MANUAL
   
