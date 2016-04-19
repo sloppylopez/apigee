@@ -4,7 +4,7 @@
 [![built with gulp](https://raw.github.com/cyparu/artwork/master/builtwith.png)](http://gulpjs.com)
 [![oficial site](https://img.shields.io/badge/sloppy-lopez-pink.svg)](http://sloppylopez.com)
 
-# Automated Node based REST API based on Swagger boiler plate
+# Automated Node based REST API SDK generator boiler plate based on Swagger 
 
 1. Node Server With Swagger-UI and Swagger API :
 
