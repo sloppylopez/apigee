@@ -16,7 +16,7 @@ Built on Node.js
 
     $ npm i
     
-    $ gulp swagger
+    $ npm run init
     
     $ node server.js &
     

@@ -32,6 +32,7 @@
     "volos-spikearrest-memory": "^0.10.0"
   },
   "devDependencies": {
+    "apigee-127": "^0.19.2",
     "gulp": "^3.9.0",
     "gulp-istanbul": "^0.10.0",
     "gulp-jshint": "^1.11.2",
@@ -53,7 +54,7 @@
   "scripts": {
     "init": "gulp schema && gulp swagger-ui && gulp init && gulp swagger",
     "start": "node app.js",
-    "edit": "a127 project edit",
+    "edit": "./node_modules/.bin/a127 project edit",
     "test": "gulp test",
     "lint": "gulp lint",
     "schema": "gulp schema",
